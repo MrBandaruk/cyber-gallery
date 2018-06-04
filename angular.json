@@ -23,7 +23,15 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/js/jquery.min.js",
+              "src/js/jquery.scrolly.min.js",
+              "src/js/jquery.dropotron.min.js",
+              "src/js/jquery.scrollex.min.js",
+              "src/js/skel.min.js",
+              "src/js/util.js",
+              "src/js/main.js"
+            ]
           },
           "configurations": {
             "production": {

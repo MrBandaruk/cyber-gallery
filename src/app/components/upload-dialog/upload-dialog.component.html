@@ -1,0 +1,18 @@
+<form [formGroup]="form" (ngSubmit)="submit(form)">
+  <h2 mat-dialog-title >Загрузка изображения</h2>
+  <div class="row" mat-dialog-content>
+
+    <mat-form-field>
+      <input matInput formControlName="imgUrl" placeholder="imgUrl" required>
+      <mat-error *ngIf="!form.value.imgUrl">Укажите URL</mat-error>
+    </mat-form-field>
+
+  </div>
+  <mat-dialog-actions>
+  <span class="buttons">
+    <button mat-raised-button [disabled]="!form.valid || !form.dirty" color="primary"
+            type="submit">Загрузить</button>
+    <button mat-raised-button color="primary" mat-dialog-close>Закрыть</button>
+  </span>
+  </mat-dialog-actions>
+</form>

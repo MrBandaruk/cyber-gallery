@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,100italic,300italic");
-@import url("https://use.fontawesome.com/releases/v5.0.13/css/all.css");
 
 * {
   margin: 0;
@@ -23,18 +22,6 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
-}
-
-/* Reset */
-
-
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-body {
-  line-height: 1;
 }
 
 ol, ul {
@@ -2046,7 +2033,7 @@ body.landing:before {
   -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
   color: rgba(255, 255, 255, 0.15);
-  content: '\f1ce';
+  content: 'I';
   cursor: default;
   display: block;
   font-size: 2em;
@@ -2479,6 +2466,11 @@ input[type="radio"] + label:before {
   display: block;
 }
 
+.image video {
+  border-radius: 4px;
+  display: block;
+}
+
 .image.left {
   float: left;
   margin: 0 1.5em 1em 0;
@@ -2499,6 +2491,10 @@ input[type="radio"] + label:before {
   width: 100%;
 }
 
+.image.left video, .image.right video {
+  width: 100%;
+}
+
 .image.fit {
   display: block;
   margin: 0 0 2em 0;
@@ -2506,6 +2502,10 @@ input[type="radio"] + label:before {
 }
 
 .image.fit img {
+   width: 100%;
+ }
+
+.image.fit video {
   width: 100%;
 }
 
@@ -3500,7 +3500,7 @@ body.is-touch #gallery {
 
 #footer {
   background: #272833;
-  padding: 6em 0;
+  padding: 20px 0;
   text-align: center;
 }
 
@@ -4069,9 +4069,6 @@ body.is-touch #gallery {
 
   /* Footer */
 
-  #footer {
-    padding: 3em 1.25em;
-  }
 
   #footer .copyright {
     line-height: inherit;

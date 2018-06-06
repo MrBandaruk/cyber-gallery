@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DialogService} from '../../services/dialog.service';
 
 @Component({
   selector: 'app-gallery',
@@ -14,9 +15,19 @@ export class GalleryComponent implements OnInit {
     'https://10mosttoday.com/wp-content/uploads/2013/09/The_Scream.jpg'
   ];
 
-  constructor() { }
+  constructor(private dialogService: DialogService) { }
 
   ngOnInit() {
+  }
+
+  openUploadDialog() {
+    this.dialogService.upload().subscribe(res => {
+      if (res) {
+        console.log('image uploaded', res);
+      }
+    }, err => {
+      console.log('error', err);
+    })
   }
 
 }

@@ -8,8 +8,10 @@ import { HomeComponent } from './pages/home/home.component';
 import {RouterModule, Routes} from '@angular/router';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { ArtImgComponent } from './components/art-img/art-img.component';
-import {MatButtonModule, MatIconModule} from '@angular/material';
-
+import {MatButtonModule, MatDialogModule, MatFormFieldModule, MatIconModule, MatInputModule} from '@angular/material';
+import { UploadDialogComponent } from './components/upload-dialog/upload-dialog.component';
+import {DialogService} from './services/dialog.service';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -24,15 +26,24 @@ const routes: Routes = [
     HomeComponent,
     GalleryComponent,
     ArtImgComponent,
+    UploadDialogComponent
+  ],
+  entryComponents: [
+    UploadDialogComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatInputModule
   ],
-  providers: [],
+  providers: [DialogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

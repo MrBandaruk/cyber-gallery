@@ -1,0 +1,37 @@
+<div id="page-wrapper">
+  <header id="header"><h1 id="logo"><a routerLink="/">Mellow●Gallery</a></h1>
+    <nav id="nav">
+      <ul>
+        <li><a routerLink="/">Домой</a></li>
+        <li><a href="#" class="button special">Попробовать</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="gallery">
+    <div class="content" >
+      <header>
+        <h2>Загрузите фотографии</h2>
+        <p></p>
+      </header>
+    </div>
+    <a href="#images" class="goto-next scrolly">Next</a>
+  </section>
+
+  <section id="images">
+    <div class="images-wrapper row">
+      <app-art-img class="col-lg-3 col-md-3 col-sm-4"
+                   *ngFor="let image of images"
+                   [image]="image"></app-art-img>
+
+
+      <!--<div class="col-lg-3 col-md-3 col-sm-4">-->
+        <!--<div class="plus-button image-wrapper">+</div>-->
+      <!--</div>-->
+
+
+    </div>
+  </section>
+</div>
+
+<button mat-fab><mat-icon>add</mat-icon></button>

@@ -9,6 +9,22 @@
   vertical-align: baseline;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 /* Reset */
 
 
@@ -3398,6 +3414,85 @@ body.landing #header {
 }
 
 body.is-touch #banner {
+  background-attachment: scroll;
+}
+
+/* Gallery */
+
+#gallery {
+  background: #272833 url("https://images.unsplash.com/photo-1503293050619-6048ffad0dc5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cdf24edcba38dfdb9180337a9a7188dd&auto=format&fit=crop&w=1055&q=80") fixed center center;
+  background-size: cover;
+  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
+  min-height: 100vh;
+  position: relative;
+  text-align: center;
+  z-index: 21;
+}
+
+#gallery:before {
+  content: '';
+  display: inline-block;
+  height: 100vh;
+  vertical-align: middle;
+  width: 1%;
+}
+
+#gallery:after {
+  background-image: -moz-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("https://png.pngtree.com/element_our/md/20180327/md_cad0fbc992da571497d47a06e8077096.jpg");
+  background-image: -webkit-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("https://png.pngtree.com/element_our/md/20180327/md_cad0fbc992da571497d47a06e8077096.jpg");
+  background-image: -ms-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("https://png.pngtree.com/element_our/md/20180327/md_cad0fbc992da571497d47a06e8077096.jpg");
+  background-image: linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("https://png.pngtree.com/element_our/md/20180327/md_cad0fbc992da571497d47a06e8077096.jpg");
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+#gallery .content {
+  display: inline-block;
+  margin-right: 1%;
+  max-width: 95%;
+  padding: 6em;
+  position: relative;
+  text-align: right;
+  vertical-align: middle;
+  z-index: 1;
+}
+
+#gallery .content header {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#gallery .content header h2 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+#gallery .content header p {
+  margin: 0.5em 0 0 0;
+  top: 0;
+}
+
+#gallery .content .image {
+  border-radius: 100%;
+  display: inline-block;
+  height: 18em;
+  margin-left: 3em;
+  vertical-align: middle;
+  width: 18em;
+}
+
+#gallery .content .image img {
+  border-radius: 100%;
+  display: block;
+  width: 100%;
+}
+
+body.is-touch #gallery {
   background-attachment: scroll;
 }
 

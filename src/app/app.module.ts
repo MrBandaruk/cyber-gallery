@@ -12,6 +12,7 @@ import {MatButtonModule, MatDialogModule, MatFormFieldModule, MatIconModule, Mat
 import { UploadDialogComponent } from './components/upload-dialog/upload-dialog.component';
 import {DialogService} from './services/dialog.service';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -41,7 +42,8 @@ const routes: Routes = [
     MatFormFieldModule,
     ReactiveFormsModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
+    HttpClientModule
   ],
   providers: [DialogService],
   bootstrap: [AppComponent]
